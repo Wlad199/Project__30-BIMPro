@@ -1,97 +1,12 @@
-/*
-// Burger (**==MW==**) ====================================================================================================//
 
-// Запрещаем скролл основного контента при открытом бургере
-body._lock {
-	overflow: hidden;
-}
-// Прячем бургер на больших экранах
-.menu__icon {
-	display: none;
-}
-
-@media (max-width: $mobile) {
-	.menu__icon {
-		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-	// Три полоски
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2); //10%
-			background-color: #fff;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - rem(1)); //transform: scale(1) translate(0px -50%);
-		}
-	}
-
-	.menu__icon._active {
-		span {
-			width: 0;
-		}
-		&::before,
-		&::after {
-		}
-		&::before {
-			top: calc(50% - rem(1));
-			transform: rotate(-45deg);
-		}
-		&::after {
-			bottom: calc(50% - rem(1));
-			transform: rotate(45deg);
-		}
-	}
-
-	.menu__body {
-		position: fixed;
-		top: 0;
-		left: -100%;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.9);
-		padding: 100px 30px 30px 30px;
-		transition: left 0.3s ease 0s;
-		overflow: auto; // Добавляем скролл
-
-		// Рисуем шапку
-		&::before {
-			content: '';
-			position: fixed;
-			width: 100%;
-			top: 0;
-			left: 0;
-			height: 70px; // Высота шапки
-			background-color: #912105;
-			z-index: 2;
-		}
-	}
-
-	// Выезд меню-бургера при нажатии на бургер
-	.menu__body._active {
-		left: 0;
-	}
-}
-*/
 // header ====================================================================================================//
 
 .header {
+	position: fixed;
+	z-index: 5;
+	width: 100%;
 	border-bottom: 1px solid #fff;
+	background-color: $gray;
 
 	&__container {
 	}
@@ -142,14 +57,16 @@ body._lock {
 		}
 	}
 }
+.header__menu .menu__body {
+	display: none;
+	@media (min-width: 1200px) {
+		display: block;
+	}
 
+}
 .menu {
 
 	&__body {
-		display: none;
-		@media (min-width: 1200px) {
-			display: block;
-		}
 	}
 
 	&__list {
@@ -158,6 +75,9 @@ body._lock {
 		@include adaptiveValue("font-size", 20, 18);
 		line-height: 135%;
 		letter-spacing: 0.2px;
+		a{
+			padding-bottom: 34px;
+		}
 	}
 
 	&__service {
@@ -184,8 +104,9 @@ body._lock {
 
 	&__sub-list {
 		position: absolute;
+		background-color: $gray;
 		left: 0;
-		top: calc(100% + 33px);
+		top: calc(100% + 34px);
 		width: 480px;
 		@include adaptiveValue("font-size", 20, 18);
 		line-height: 135%; /* 27/20 */
@@ -197,12 +118,15 @@ body._lock {
 		opacity: 0;
 		outline: 1px solid #353539;
 		li {
-			border-bottom: 1px solid #515157;
+			&:not(:last-child){
+				border-bottom: 1px solid #515157;
+			}
 			padding-left: 40px;
 			a {
-				display: flex;
-				align-items: center;
-				height: 60px;
+				display: block;
+				min-height: 60px;
+				padding-top: 15px;
+				padding-bottom: 15px;
 				transition: all 0.2s ease 0s;
 				&:hover{
 					color: $orange;
@@ -213,7 +137,6 @@ body._lock {
 }
 
 .menu-link {
-	padding-bottom: 34px;
 	position: relative;
 	transition: all 0.2s ease 0s;
 	&::after{
@@ -233,4 +156,13 @@ body._lock {
 			width: 100%;
 		}
 	}
+}
+
+// scroll-bar ====================================================================================================//
+
+::-webkit-scrollbar {
+	background-color: $gray-light;
+}
+::-webkit-scrollbar-thumb {
+	background-color: $orange;
 }

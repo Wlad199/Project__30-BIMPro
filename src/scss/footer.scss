@@ -1,3 +1,120 @@
-//====================================================================================================
 
-//====================================================================================================
+.footer {
+	@include adaptiveValue("padding-top", 100, 40);
+	//padding-bottom: 100px;
+	background-color: #070707;
+
+	&__container {
+	}
+
+	&__top {
+	}
+
+	&__copy {
+		border-top: 1px solid #E3E2E2;
+		padding-top: 24px;
+		padding-bottom: 24px;
+		@include adaptiveValue("font-size", 18, 14);
+		text-align: center;
+	}
+}
+
+.top-footer .menu-link{
+	padding-bottom: 5px;
+	&:hover {
+		color: inherit;
+	}
+}
+
+.top-footer {
+	@include adaptiveValue("padding-bottom", 65, 30);
+
+	&__menu {
+		display: flex;
+		align-items: center;
+		padding-bottom: 70px;
+		@include adaptiveValue("padding-bottom", 70, 35);
+		@media (max-width: 1000px) {
+			display: block;
+		}
+	}
+
+	&__logo {
+		@include adaptiveValue("margin-right", 75, 30, 1370, 1200, 1);
+		@media (max-width: 1000px) {
+			padding-bottom: 20px;
+		}
+	}
+	
+	&__other {
+		display: flex;
+		gap: 40px;
+		@include adaptiveValue("padding-bottom", 56, 35);
+		a {
+			color: $orange;
+		}
+		.menu-link:hover{
+			color: $orange;
+		}
+		@media (max-width: 600px) {
+			display: block;
+			p {
+				padding-bottom: 15px;
+			}
+			a:not(:last-child){
+				margin-right: 20px;
+				
+			}
+
+		}
+	}
+
+	&__contacts {
+	}
+
+	.menu__list {
+		@media (max-width: 1000px) {
+			flex-wrap: wrap;
+			gap: 17px;
+			justify-content: space-between;
+			@include adaptiveValue("font-size", 18, 16, 1000, 320, 1);
+		}
+
+	}
+}
+
+.footer-contacts {
+	@include adaptiveValue("font-size", 18, 14);
+	line-height: 130%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0px -10px;
+
+	&__adress {
+		@include adaptiveValue("font-size", 18, 12);
+		padding: 0px 15px;
+		p:not(:last-child){
+			padding-bottom: 10px;
+		}
+	}
+
+	&__info {
+		padding: 0px 10px;
+		text-align: right;
+		display: flex;
+		flex-direction: column;
+		a{
+			display: inline-block;
+			transition: all 0.3s ease 0s;
+			&:first-child{
+				padding-bottom: 14px;
+			}
+			&:nth-child(2){
+				flex: 1 1 auto;
+			}
+		}
+		a:last-child {
+			text-align: left;
+		}
+	}
+}
