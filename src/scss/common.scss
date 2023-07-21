@@ -1,1 +1,46 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.text {
+	@include adaptiveValue("font-size", 18, 16);
+	line-height: 150%;
+	letter-spacing: normal;
+	letter-spacing: 0.0225rem;
+}
+
+// button ====================================================================================================//
+
+.button {
+	@include adaptiveValue("font-size", 18, 16);
+	line-height: 150%;
+	letter-spacing: 0.18px;
+	background-color: $orange;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+	transition: all 0.3s ease 0s;
+	&:hover{
+		background-color: #cd4112;
+	}
+
+	&_st{
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: 150%;
+		letter-spacing: 0.18px;
+		background-color: $orange;
+		display: inline-flex;
+		height: 70px;
+		width: 400px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 6px;
+		transition: all 0.3s ease 0s;
+		@media (max-width: 450px) {
+			min-width: none;
+			width: 100%;
+		}
+		&:hover{
+			background-color: #cd4112;
+		}
+	}
+}

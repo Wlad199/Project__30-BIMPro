@@ -1,3 +1,74 @@
 .page {
-	//margin-top: 90px;
+	margin-top: 90px;
+	@include adaptiveValue("padding-top", 100, 30);
+}
+.main-screen {
+	display: flex;
+
+		&__content {
+			flex: 0 0 100%
+		}
+
+		&__presentation {
+			//flex: 0 0 60%;
+			overflow: hidden;
+			transform: translate(-100%, 0);
+			@media (min-width: 767px) {
+				flex: 0 0 calc((100vw - 30px) * 0.6 + 15px);
+			}
+		}
+}
+
+.content-main-screen {
+
+		&__container {
+		}
+
+		&__body {
+			width: 40%;
+		}
+
+		&__title {
+			@include adaptiveValue("font-size", 60, 30);
+			font-weight: 700;
+			letter-spacing: 0.7px;
+			text-transform: uppercase;
+			@include adaptiveValue("padding-bottom", 30, 20);
+		}
+
+		&__text {
+			@include adaptiveValue("padding-bottom", 50, 25);
+		}
+
+		&__button {
+		}
+}
+.presentation-main-screen {
+
+		&__list {
+			li {
+				border-radius: 10px;
+				overflow: hidden;
+			}
+		}
+}
+
+
+//  ====================================================================================================//
+.slick-track{
+	display: flex;	//!!! Выстроить в ряд
+	//gap: 50px;
+	//max-width: 1900px;
+}
+.slick-slider{
+	//max-width: 1000px;
+}
+
+.slick-active {
+	//margin-right: 120px;
+	img {
+		//width: 100%;
+	}
+}
+.slick-slide{
 }
