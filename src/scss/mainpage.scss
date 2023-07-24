@@ -1,31 +1,28 @@
 .page {
 	margin-top: 90px;
+	margin-bottom: 100px;  	//!!!
 	@include adaptiveValue("padding-top", 100, 30);
 }
 .main-screen {
-	display: flex;
+
+	&__container{
+		display: flex;
+	}
 
 		&__content {
-			flex: 0 0 100%
+			flex: 0 0 40%
 		}
 
 		&__presentation {
-			//flex: 0 0 60%;
-			overflow: hidden;
-			transform: translate(-100%, 0);
-			@media (min-width: 767px) {
-				flex: 0 0 calc((100vw - 30px) * 0.6 + 15px);
-			}
+			flex: 0 0 60%;
 		}
 }
 
 .content-main-screen {
 
-		&__container {
-		}
 
 		&__body {
-			width: 40%;
+			//width: 40%;
 		}
 
 		&__title {
@@ -47,8 +44,11 @@
 
 		&__list {
 			li {
-				border-radius: 10px;
-				overflow: hidden;
+				//border-radius: 10px;
+				//overflow: hidden;
+			}
+			img {
+				max-width: 100%;
 			}
 		}
 }
@@ -71,4 +71,63 @@
 	}
 }
 .slick-slide{
+}
+
+// service ====================================================================================================//
+
+.service {
+	@include adaptiveValue("padding-top", 120, 60);
+
+	&__container {
+	}
+
+	&__title {
+		@include adaptiveValue("padding-bottom", 80, 40);
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 29px;
+		@media (max-width: 767px) {
+			gap: 15px;
+		}
+	}
+
+	&__column {
+		flex: 1 1 calc(33.333% - (58px / 3));
+		border-radius: 5px;
+		border: 2px solid #464646;
+		background: #191919;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 25px;
+		//width: 436px;
+		//height: 180px;
+		padding: 50px 25px;
+		transition: all 0.2s ease 0s;
+		&:hover{
+			border: 2px solid $orange;
+		}
+		@media (max-width: 767px) {
+			gap: 15px;
+			padding: 20px 15px;
+			flex: 0 1 100%;
+		}
+	}
+}
+
+.column-service {
+
+	&__image {
+		
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 22, 18);
+		line-height: 120%;
+		letter-spacing: 0.22px;
+	}
 }

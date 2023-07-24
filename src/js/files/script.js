@@ -7,7 +7,7 @@ import { flsModules } from "./modules.js";
 // Функционал слайдера-слик (MW 3.2)
 $(document).ready(function () {
 	$('.presentation-main-screen__list').slick({
-		slidesToShow: 1, // кол-во показ. слайдов
+		//slidesToShow: 1, // кол-во показ. слайдов
 		//adaptiveHeight: true, // адаптивная высота (false)
 	});
 })
