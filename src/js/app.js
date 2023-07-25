@@ -33,11 +33,11 @@ import '../js/files/my-js/slick.min.js'
 //===================//
 
 /* Модуль работы с табами Документация: Сниппет (HTML): tabs */
-// flsFunctions.tabs();
+//flsFunctions.tabs();
 //===================//
 
 /* Модуль работы со спойлерами Документация:Сниппет (HTML): spollers */
-// flsFunctions.spollers();
+flsFunctions.spollers();
 //===================//
 
 /* Работа с полями формы */
@@ -55,7 +55,7 @@ import '../js/files/my-js/slick.min.js'
 //===================//
 
 /* Динамический адаптив */
-// import "./libs/dynamic_adapt.js";
+import "./libs/dynamic_adapt.js";
 //===================//
 
 
