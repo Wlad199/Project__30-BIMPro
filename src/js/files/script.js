@@ -32,3 +32,13 @@ parent.addEventListener('click', (event) => {
 		target.classList.add('_active');
 	}
 });
+
+
+// Функционал слайдера-слик (MW 3.2)
+$(document).ready(function () {
+	$('.slider__content').slick({
+		slidesToShow: 4, // кол-во показ. слайдов
+		dots: true,
+		//autoplay: true, // автовоспроизведение (false)
+	});
+})

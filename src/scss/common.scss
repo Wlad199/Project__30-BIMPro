@@ -79,4 +79,75 @@
 	}
 }
 
+// slider ====================================================================================================//
 
+.slider {
+
+	&__content {
+		//position: relative;
+		.slick-list {
+			overflow: hidden;	//!!! Скрыть лишние слайды
+			
+		}
+		/* Стрелки*/
+			.slick-arrow{
+				position: absolute;
+				top: 3px;
+				z-index: 10;
+				font-size: 0;
+				height: 50px;
+				width: 50px;
+				border: 1px solid #424242;
+			}
+			/* Стрелка влево */
+			.slick-arrow.slick-prev{
+				right: 60px;
+				background: url('@img/media/arrow-right.svg') 50% 50% no-repeat;
+				&:hover{
+					background: url('@img/media/arrow-left-2.svg') 50% 50% no-repeat;
+				}
+			}
+			/* Стрелка вправо */
+			.slick-arrow.slick-next{
+				right: 10px;
+				background: url('@img/media/arrow-left.svg') 50% 50% no-repeat;
+				&:hover{
+					background: url('@img/media/arrow-right-2.svg') 50% 50% no-repeat;
+				}
+			}
+			/*точки */
+			.slick-dots{
+				position: absolute;
+				bottom: -30px;
+				left: 6px;
+				display: flex;
+				align-items: center;
+				justify-content: start;
+				//margin-top: 30px;
+			}
+			.slick-dots li{
+				margin: 0px 10px;
+				list-style: none;
+			}
+			.slick-dots li button{
+				font-size: 0;
+				height: 4px;
+				width: 70px;
+				background-color: #E3E2E2;
+				//border: 1px solid #000;
+			}
+			/* Активная точка */
+			.slick-dots li.slick-active button{
+				background-color: $orange;
+			}
+	}
+
+	&__element {
+	}
+}
+
+
+///* Ограничивающая оболочка */
+//.slick-list {
+//	overflow: hidden;	//!!! Скрыть лишние слайды
+//}
