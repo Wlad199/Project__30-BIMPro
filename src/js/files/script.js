@@ -6,9 +6,15 @@ import { flsModules } from "./modules.js";
 
 // Функционал слайдера-слик (MW 3.2)
 $(document).ready(function () {
-	$('.presentation-main-screen__list').slick({
-		//slidesToShow: 1, // кол-во показ. слайдов
-		//adaptiveHeight: true, // адаптивная высота (false)
+	$('.image-main-screen').slick({
+		slidesToShow: 1, // кол-во показ. слайдов
+		arrows: false, // стрелки
+		autoplay: true, // автовоспроизведение (false)
+		//dots: true,
+		//infinite: true,
+		speed: 1000,
+		fade: true,
+		cssEase: 'linear'
 	});
 })
 
@@ -42,3 +48,21 @@ $(document).ready(function () {
 		//autoplay: true, // автовоспроизведение (false)
 	});
 })
+
+//let parentTwo = document.querySelector('.ask-list');
+//let menuItemTwo = parent.querySelectorAll('.ask-item');
+
+//parentTwo.addEventListener('click', (event) => {
+//	// Отлавливаем элемент в родители на который мы нажали
+//	let target = event.target.closest('.ask-item');
+
+//	// Проверяем тот ли это элемент который нам нужен
+//	if (target.classList.contains('ask-item')) {
+//		for (let i = 0; i < menuItemTwo.length; i++) {
+//			// Убираем у других
+//			menuItemTwo[i].classList.remove('_active');
+//		}
+//		// Добавляем тому на который нажали
+//		target.classList.add('_active');
+//	}
+//});

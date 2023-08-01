@@ -51,7 +51,7 @@ flsFunctions.spollers();
 //===================//
 
 //Попапы. Сниппет (HTML): pl
-// import './libs/popup.js'
+import './libs/popup.js'
 //===================//
 
 /* Динамический адаптив */
