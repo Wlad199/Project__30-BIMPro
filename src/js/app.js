@@ -47,7 +47,7 @@ flsFunctions.spollers();
 //===================//
 
 // Плавная навигация по странице
-// flsScroll.pageNavigation();
+flsScroll.pageNavigation();
 //===================//
 
 //Попапы. Сниппет (HTML): pl
@@ -193,7 +193,7 @@ import * as flsForms from "./files/forms/forms.js";
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация по работе в шаблоне: js/libs/watcher.js
 // Сниппет(HTML):
-// import './libs/watcher.js'
+//import './libs/watcher.js'
 
 // Функции работы скроллом
 import * as flsScroll from "./files/scroll/scroll.js";
