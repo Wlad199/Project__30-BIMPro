@@ -129,7 +129,7 @@ itemAsk[0].addEventListener('click', showContent01)
 itemAsk[1].addEventListener('click', showContent02)
 itemAsk[2].addEventListener('click', showContent03)
 
-//  ====================================================================================================//
+// information open-modules ====================================================================================================//
 
 
 let paren = document.querySelector('.ask-list');
@@ -149,3 +149,25 @@ paren.addEventListener('click', (event) => {
 		target.classList.add('_active');
 	}
 });
+
+// display-box ====================================================================================================//
+
+const parentDisplay01 = document.querySelector('.display_01')
+const itemSpolers01 = parentDisplay01.querySelectorAll('.spollers__item')
+const imageSpolers01 = parentDisplay01.querySelectorAll('.image-display-item')
+//console.log(itemSpolers01);
+
+function showImageOne01() {
+	imageSpolers01.forEach(el => {
+		el.style.display = "none"
+	});
+	imageSpolers01[0].style.display = "block"
+}
+function showImageOne02() {
+	imageSpolers01.forEach(el => {
+		el.style.display = "none"
+	});
+	imageSpolers01[1].style.display = "block"
+}
+itemSpolers01[0].addEventListener('click', showImageOne01)
+itemSpolers01[1].addEventListener('click', showImageOne02)
