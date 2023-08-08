@@ -155,19 +155,28 @@ paren.addEventListener('click', (event) => {
 const parentDisplay01 = document.querySelector('.display_01')
 const itemSpolers01 = parentDisplay01.querySelectorAll('.spollers__item')
 const imageSpolers01 = parentDisplay01.querySelectorAll('.image-display-item')
-//console.log(itemSpolers01);
 
 function showImageOne01() {
 	imageSpolers01.forEach(el => {
-		el.style.display = "none"
+		el.style.cssText = `
+		transition: all 1s ease 0s;
+		opacity: 0`
 	});
-	imageSpolers01[0].style.display = "block"
+	imageSpolers01[0].style.cssText = `
+	transition: all 1s ease 0s;
+	opacity: 1`
 }
+
 function showImageOne02() {
 	imageSpolers01.forEach(el => {
-		el.style.display = "none"
+		el.style.cssText = `
+		transition: all 1s ease 0s;
+		opacity: 0`
 	});
-	imageSpolers01[1].style.display = "block"
+	imageSpolers01[1].style.cssText = `
+	transition: all 1s ease 0s;
+	opacity: 1`
 }
+
 itemSpolers01[0].addEventListener('click', showImageOne01)
 itemSpolers01[1].addEventListener('click', showImageOne02)
