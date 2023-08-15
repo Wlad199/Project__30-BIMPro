@@ -5,7 +5,7 @@
 				<div class="content-main-screen__body">
 					<h1 class="content-main-screen__title">Визуализация любой сложности</h1>
 					<div class="content-main-screen__text text">Создадим 3D Визуализации, презентационные интерактивные и VR-материалы, анимации, жилой и коммерческой недвижимости.</div>
-					<a href="#" class="content-main-screen__button button_st">Рассчитать стоимость проекта</a>
+					<a href="#" data-popup="#call-back" class="content-main-screen__button button_st">Рассчитать стоимость проекта</a>
 				</div>
 			</div>
 			<div class="main-screen__image image-main-screen">
@@ -268,11 +268,11 @@
 			<a href="#" data-popup="#call-back" class="steps__button button_trans">Оставить заявку</a>
 		</div>
 	</section>
-	<div class="display-box">
-		<section class="display display_01">
+	<section class="display-box">
+		<div class="display display_01">
 			<div class="display__image image-display">
-				<div class="image-display__one image-display-item"><img src="@img/display/01.jpg" alt="image"></div>
-				<div class="image-display__two image-display-item"><img src="@img/display/02.jpg" alt="image"></div>
+				<div class="image-display-item _active" id="modal-1"><img src="@img/display/01.jpg" alt="image"></div>
+				<div class="image-display-item" id="modal-2"><img src="@img/display/02.jpg" alt="image"></div>
 			</div>
 			<div class="display__content">
 				<div class="display__container">
@@ -281,7 +281,7 @@
 						<div class="display__spollers">
 							<div data-spollers data-one-spoller class="spollers">
 								<div class="spollers__item">
-									<button type="button" data-spoller class="spollers__title">Визуализация жилых комплексов</button>
+									<button type="button" data-spoller class="spollers__title" data-modal-button="modal-1">Визуализация жилых комплексов</button>
 									<div class="spollers__body">
 										<p>Фотореалистичная визуализация любых объектов комплексной застройки от 1 га на основе проектной документации, чертежей или BIM-модели.</p>
 										<p class="body-spollers__tz">Стоимость зависит от сложности ТЗ. <a href="#">Посмотреть состав технического задания.</a> <br> Вы получите 4-6 перспективных изображений от 1800px до 3840px по длинной стороне.</p>
@@ -293,7 +293,7 @@
 									</div>
 								</div>
 								<div class="spollers__item">
-									<button type="button" data-spoller class="spollers__title">Визуализация благоустройства территории</button>
+									<button type="button" data-spoller class="spollers__title" data-modal-button="modal-2">Визуализация благоустройства территории</button>
 									<div class="spollers__body">
 										<p>Фотореалистичная визуализация любых объектов комплексной застройки от 1 га на основе проектной документации, чертежей или BIM-модели.</p>
 										<p class="body-spollers__tz">Стоимость зависит от сложности ТЗ. <a href="#">Посмотреть состав технического задания.</a> <br> Вы получите 4-6 перспективных изображений от 1800px до 3840px по длинной стороне.</p>
@@ -310,11 +310,11 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="display display__two display_02">
+		</div>
+		<div class="display display__two display_02">
 			<div class="display__image image-display">
-				<div class="image-display__one"><img src="@img/display/03.jpg" alt="image"></div>
-				<div class="image-display__two"><img src="@img/display/04.jpg" alt="image"></div>
+				<div class="image-display-item _active" id="modal-1"><img src="@img/display/03.jpg" alt="image"></div>
+				<div class="image-display-item" id="modal-2"><img src="@img/display/04.jpg" alt="image"></div>
 			</div>
 			<div class="display__content">
 				<div class="display__container">
@@ -323,7 +323,7 @@
 						<div class="display__spollers">
 							<div data-spollers data-one-spoller class="spollers">
 								<div class="spollers__item">
-									<button type="button" data-spoller class="spollers__title">Визуализация жилых зданий</button>
+									<button type="button" data-spoller class="spollers__title" data-modal-button="modal-1">Визуализация жилых зданий</button>
 									<div class="spollers__body">
 										<p>Фотореалистичная визуализация жилых объектов капитального строительства с прилегающей территорией, на площади от 5000 м2 на основе проектной документации, чертежей или BIM-модели.</p>
 										<p class="body-spollers__tz">Стоимость зависит от сложности ТЗ. <a href="#">Посмотреть состав технического задания.</a> <br> Вы получите 4-6 перспективных изображений от 1800px до 3840px по длинной стороне.</p>
@@ -335,7 +335,7 @@
 									</div>
 								</div>
 								<div class="spollers__item">
-									<button type="button" data-spoller class="spollers__title">Визуализация общественных, промышленных и складских зданий</button>
+									<button type="button" data-spoller class="spollers__title" data-modal-button="modal-2">Визуализация общественных, промышленных и складских зданий</button>
 									<div class="spollers__body">
 										<p>Фотореалистичная визуализация общественных и промышленных объектов капитального строительства  с прилегающей территорией, на площади от 5000 м2 на основе проектной документации, чертежей или BIM-модели.</p>
 										<p class="body-spollers__tz">Стоимость зависит от сложности ТЗ. <a href="#">Посмотреть состав технического задания.</a> <br> Вы получите 4-6 перспективных изображений от 1800px до 3840px по длинной стороне.</p>
@@ -352,11 +352,11 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="display display_03">
+		</div>
+		<div class="display display_03">
 			<div class="display__image image-display">
-				<div class="image-display__one"><img src="@img/display/05.jpg" alt="image"></div>
-				<div class="image-display__two"><img src="@img/display/06.jpg" alt="image"></div>
+				<div class="image-display-item _active" id="modal-1"><img src="@img/display/05.jpg" alt="image"></div>
+				<div class="image-display-item" id="modal-2"><img src="@img/display/06.jpg" alt="image"></div>
 			</div>
 			<div class="display__content">
 				<div class="display__container">
@@ -365,7 +365,7 @@
 						<div class="display__spollers">
 							<div data-spollers data-one-spoller class="spollers">
 								<div class="spollers__item">
-									<button type="button" data-spoller class="spollers__title">Визуализация общественных пространств</button>
+									<button type="button" data-spoller class="spollers__title" data-modal-button="modal-1">Визуализация общественных пространств</button>
 									<div class="spollers__body">
 										<p>Фотореалистичная визуализация любых общественных интерьеров от 1000 м2 на основе проектной документации, чертежей или BIM-модели.</p>
 										<p class="body-spollers__tz">Стоимость зависит от сложности ТЗ. <a href="#">Посмотреть состав технического задания.</a> <br> Вы получите 4-6 перспективных изображений от 1800px до 3840px по длинной стороне.</p>
@@ -377,7 +377,7 @@
 									</div>
 								</div>
 								<div class="spollers__item">
-									<button type="button" data-spoller class="spollers__title">Комплексная визуализация жилых помещений</button>
+									<button type="button" data-spoller class="spollers__title" data-modal-button="modal-2">Комплексная визуализация жилых помещений</button>
 									<div class="spollers__body">
 										<p>Фотореалистичная визуализация жилых интерьеров от 500 м2 на основе проектной документации, чертежей или BIM-модели.</p>
 										<p class="body-spollers__tz">Стоимость зависит от сложности ТЗ. <a href="#">Посмотреть состав технического задания.</a> <br> Вы получите 4-6 перспективных изображений от 1800px до 3840px по длинной стороне.</p>
@@ -394,8 +394,8 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="display display__two display_04">
+		</div>
+		<div class="display display__two display_04">
 			<div class="display__image image-display">
 				<div class="image-display__one"><img src="@img/display/07.jpg" alt="image"></div>
 			</div>
@@ -423,8 +423,8 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="display display display_05">
+		</div>
+		<div class="display display display_05">
 			<div class="display__image image-display">
 				<a href="#" class="image-display__one">
 					<iframe width="100%" height="640" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/collection/7v2JJ?logo=1&info=1&fs=0&vr=1&zoom=1&sd=1&initload=0&autorotate=0.18&thumbs=1&inst=ru"></iframe>
@@ -545,14 +545,14 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="display display__two display_06">
+		</div>
+		<div class="display display__two display_06">
 			<div class="display__image image-display">
 				<a href="#" class="image-display__one">
-					<div class="image-display__one"><img src="@img/display/12.jpg" alt="image"></div>
-					<div class="image-display__two"><img src="@img/display/13.jpg" alt="image"></div>
-					<div class="image-display__three"><img src="@img/display/14.jpg" alt="image"></div>
-					<div class="image-display__four"><img src="@img/display/15.jpg" alt="image"></div>
+					<div class="image-display-item _active" id="modal-1"><img src="@img/display/12.jpg" alt="image"></div>
+					<div class="image-display-item" id="modal-2"><img src="@img/display/13.jpg" alt="image"></div>
+					<div class="image-display-item" id="modal-3"><img src="@img/display/14.jpg" alt="image"></div>
+					<div class="image-display-item" id="modal-4"><img src="@img/display/15.jpg" alt="image"></div>
 				</a>
 			</div>
 			<div class="display__content">
@@ -565,7 +565,7 @@
 						<div class="display__spollers">
 							<div data-spollers data-one-spoller class="spollers">
 								<div class="spollers__item">
-									<button type="button" data-spoller class="spollers__title spollers__title_m">
+									<button type="button" data-spoller class="spollers__title spollers__title_m" data-modal-button="modal-1">
 										<svg width="46" height="43" viewBox="0 0 46 43" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M6.82781 1V5.892M6.82781 30.352V5.892M1 6.43556V36.0593M6.82781 5.892H45V41.7667H6.82781" stroke="#F5F5F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											<path d="M7.11921 41.7657C3.73966 41.7657 1 39.2105 1 36.0584C1 32.9063 3.73966 30.3511 7.11921 30.3511" stroke="#F5F5F5" stroke-width="1.5" stroke-linejoin="round"/>
@@ -585,7 +585,7 @@
 									</div>
 								</div>
 								<div class="spollers__item">
-									<button type="button" data-spoller class="spollers__title spollers__title_m">
+									<button type="button" data-spoller class="spollers__title spollers__title_m" data-modal-button="modal-2">
 										<svg width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="1" y="1" width="42.1971" height="33.2774" stroke="#F5F5F5" stroke-width="1.5" stroke-linejoin="round"/>
 											<rect x="35.9927" y="15.4087" width="7.20438" height="3.08759" stroke="#F5F5F5" stroke-width="1.5" stroke-linejoin="round"/>
@@ -613,7 +613,7 @@
 									</div>
 								</div>
 								<div class="spollers__item">
-									<button type="button" data-spoller class="spollers__title spollers__title_m">
+									<button type="button" data-spoller class="spollers__title spollers__title_m" data-modal-button="modal-3">
 										<svg width="49" height="36" viewBox="0 0 49 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M4.08759 34.2774H21.927V1H4.08759V34.2774ZM4.08759 34.2774H1" stroke="#F5F5F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											<rect x="6.48926" y="3.40137" width="3.08759" height="3.43066" stroke="#F5F5F5" stroke-width="1.5" stroke-linejoin="round"/>
@@ -655,7 +655,7 @@
 									</div>
 								</div>
 								<div class="spollers__item">
-									<button type="button" data-spoller class="spollers__title spollers__title_m">
+									<button type="button" data-spoller class="spollers__title spollers__title_m" data-modal-button="modal-4">
 										<svg width="49" height="36" viewBox="0 0 49 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M21.4124 8.57666H27.9307M7.86133 25.3869V34.6497H42.511V8.57666H36.8504" stroke="#F5F5F5" stroke-width="1.5" stroke-linejoin="round"/>
 											<rect x="1" y="3.77368" width="20.5839" height="21.6131" stroke="#F5F5F5" stroke-width="1.5" stroke-linejoin="round"/>
@@ -683,8 +683,8 @@
 					</div>
 				</div>
 			</div>
-		</section>
-</div>
+		</div>
+</section>
 	<section class="last-project">
 		<div class="last-project__container">
 			<h3 class="last-project__title title">КАКИЕ ПРОЕКТЫ МЫ УЖЕ РЕАЛИЗОВАЛИ?</h3>

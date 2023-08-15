@@ -151,7 +151,7 @@ paren.addEventListener('click', (event) => {
 });
 
 // display-box ====================================================================================================//
-
+/*
 const parentDisplay01 = document.querySelector('.display_01')
 const itemSpolers01 = parentDisplay01.querySelectorAll('.spollers__item')
 const imageSpolers01 = parentDisplay01.querySelectorAll('.image-display-item')
@@ -180,3 +180,22 @@ function showImageOne02() {
 
 itemSpolers01[0].addEventListener('click', showImageOne01)
 itemSpolers01[1].addEventListener('click', showImageOne02)
+*/
+//  ====================================================================================================//
+
+const modalButton = document.querySelectorAll('[data-modal-button]')
+
+modalButton.forEach(i => {
+	i.addEventListener('click', function (event) {
+
+		const modalParentBlock = event.target.closest('.display')
+		const modalImage = modalParentBlock.querySelector('#' + this.dataset.modalButton)
+
+		const modalImages = modalParentBlock.querySelectorAll('.image-display-item')
+		modalImages.forEach(function (i) {
+			i.classList.remove('_active')
+		})
+
+		modalImage.classList.add('_active')
+	})
+});

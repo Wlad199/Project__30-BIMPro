@@ -706,6 +706,10 @@
 
 // display ====================================================================================================//
 
+.display-box{
+	@include adaptiveValue("padding-bottom", 80, 40);
+}
+
 .display {
 	background-color: #2E2E31;
 	@media (min-width: 992px) {
@@ -910,7 +914,7 @@
 		}
 	}
 }
-
+/*
 .image-display{
 	position: relative;
 
@@ -927,11 +931,21 @@
 		display: none;
 	}
 }
+*/
+
+.image-display-item{
+	transition: all 1s ease 0s;
+	opacity: 0;
+}
+.image-display-item._active{
+	opacity: 1;
+}
+
 
 // last-project ====================================================================================================//
 
 .last-project {
-	@include adaptiveValue("padding-top", 150, 80);
+	@include adaptiveValue("padding-top", 80, 40);
 	background-color: #2E2E31;
 	padding-bottom: 40px;
 
