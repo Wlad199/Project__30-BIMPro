@@ -161,8 +161,13 @@
 // scroll-bar ====================================================================================================//
 
 ::-webkit-scrollbar {
-	background-color: $gray-light;
+	background-color: #39393e;
+	width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: $orange;
+	background-color: rgba(#EA4C14, 0.8);
+	transition: all 0.5s ease 0s;
+	&:hover{
+		background-color: #EA4C14;
+	}
 }
