@@ -49,29 +49,9 @@ $(document).ready(function () {
 	$('.slider__content').slick({
 		slidesToShow: 4, // кол-во показ. слайдов
 		dots: true,
-		//autoplay: true, // автовоспроизведение (false)
+		autoplay: true, // автовоспроизведение (false)
 	});
 })
-
-//  ====================================================================================================//
-
-//let parentTwo = document.querySelector('.ask-list');
-//let menuItemTwo = parent.querySelectorAll('.ask-item');
-
-//parentTwo.addEventListener('click', (event) => {
-//	// Отлавливаем элемент в родители на который мы нажали
-//	let target = event.target.closest('.ask-item');
-
-//	// Проверяем тот ли это элемент который нам нужен
-//	if (target.classList.contains('ask-item')) {
-//		for (let i = 0; i < menuItemTwo.length; i++) {
-//			// Убираем у других
-//			menuItemTwo[i].classList.remove('_active');
-//		}
-//		// Добавляем тому на который нажали
-//		target.classList.add('_active');
-//	}
-//});
 
 // questions ====================================================================================================//
 
@@ -151,37 +131,6 @@ paren.addEventListener('click', (event) => {
 });
 
 // display-box ====================================================================================================//
-/*
-const parentDisplay01 = document.querySelector('.display_01')
-const itemSpolers01 = parentDisplay01.querySelectorAll('.spollers__item')
-const imageSpolers01 = parentDisplay01.querySelectorAll('.image-display-item')
-
-function showImageOne01() {
-	imageSpolers01.forEach(el => {
-		el.style.cssText = `
-		transition: all 1s ease 0s;
-		opacity: 0`
-	});
-	imageSpolers01[0].style.cssText = `
-	transition: all 1s ease 0s;
-	opacity: 1`
-}
-
-function showImageOne02() {
-	imageSpolers01.forEach(el => {
-		el.style.cssText = `
-		transition: all 1s ease 0s;
-		opacity: 0`
-	});
-	imageSpolers01[1].style.cssText = `
-	transition: all 1s ease 0s;
-	opacity: 1`
-}
-
-itemSpolers01[0].addEventListener('click', showImageOne01)
-itemSpolers01[1].addEventListener('click', showImageOne02)
-*/
-//  ====================================================================================================//
 
 const modalButton = document.querySelectorAll('[data-modal-button]')
 

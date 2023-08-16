@@ -51,7 +51,9 @@
 
 		&__body {
 			//width: 50%;
-			padding-right: 20px;
+			@media (min-width: 992px) {
+				padding-right: 20px;
+			}
 		}
 
 		&__title {
@@ -489,6 +491,9 @@
 	&__answer {
 		flex: 0 1 50%;
 	}
+	ul p {
+		padding-bottom: 15px;
+	}
 }
 
 .ask-questions {
@@ -563,7 +568,8 @@
 	}
 
 	&__title {
-		font-size: 26px;
+		@include adaptiveValue("font-size", 26, 20);
+		text-align: left;
 		line-height: 122%;
 		letter-spacing: 0.22px;
 		transition: all 0.2s ease 0s;
@@ -597,6 +603,9 @@
 			background-color: #fff;
 			transition: all 0.5s ease 0s;
 			transform: rotate(-45deg);
+			@media (max-width: 450px) {
+				top: 42px;
+			}
 		}
 		&::after{
 			content: '';
@@ -608,6 +617,9 @@
 			background-color: #fff;
 			transition: all 0.5s ease 0s;
 			transform: rotate(45deg);
+			@media (max-width: 450px) {
+				top: 42px;
+			}
 		}
 	}
 
@@ -773,12 +785,6 @@
 		@media (min-width: 992px) {
 			padding-left: 45px;
 		}
-		p {
-			@include adaptiveValue("font-size", 18, 16);
-			line-height: 150%;
-			padding-top: 10px;
-			text-transform: none;
-		}
 	}
 
 	&__spollers {
@@ -801,6 +807,7 @@
 	}
 }
 
+
 .spollers {
 
 	&__item {
@@ -808,6 +815,7 @@
 
 	&__title {
 		&_m{
+			cursor: pointer;
 			display: flex;
 			gap: 25px;
 			align-items: center;
@@ -1290,7 +1298,7 @@
 
 	&__list {
 		p{
-			padding-bottom: 20px;
+			//padding-bottom: 20px;
 		}
 	}
 
@@ -1341,6 +1349,12 @@
 		}
 		svg {
 			display: block;
+		}
+	}
+
+	&_2 {
+		p {
+			padding-bottom: 15px;
 		}
 	}
 
